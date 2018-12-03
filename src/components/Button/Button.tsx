@@ -1,11 +1,11 @@
 import styled from '@/theme';
 
 const Button = styled.button`
-  font-size: 16px;
   padding: 12px 18px;
-  border-radius: 1.75rem;
   border: none;
+  border-radius: 1.75rem;
   cursor: pointer;
+  font-size: 16px;
   transition: 0.2s ease;
 
   &:hover {
