@@ -15,3 +15,12 @@
     url('../fonts/CircularStd/CircularStd-Medium.woff') format('woff'),
     url('../fonts/CircularStd/CircularStd-Medium.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'SFUIText';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/SFUIText/SFUIText-Regular.woff2') format('woff2'),
+    url('../fonts/SFUIText/SFUIText-Regular.woff') format('woff'),
+    url('../fonts/SFUIText/SFUIText-Regular.ttf') format('truetype');
+}

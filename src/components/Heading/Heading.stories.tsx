@@ -3,22 +3,30 @@ import { storiesOf } from '@storybook/react';
 
 import { theme, ThemeProvider } from '@/theme';
 
-import { PrimaryButton, SecondaryButton } from './Button';
+import { H1, H2, H3 } from './Heading';
 import GlobalStyle from '../../GlobalStyle';
 
-storiesOf('Button', module)
-  .add('primary', () => (
+storiesOf('Heading', module)
+  .add('h1', () => (
     <ThemeProvider theme={theme}>
       <Fragment>
-        <PrimaryButton type="button">Primary Button</PrimaryButton>
+        <H1>Lorem ipsum dolar sit amet</H1>
         <GlobalStyle />
       </Fragment>
     </ThemeProvider>
   ))
-  .add('secondary', () => (
+  .add('h2', () => (
     <ThemeProvider theme={theme}>
       <Fragment>
-        <SecondaryButton type="button">Secondary Button</SecondaryButton>
+        <H2>Lorem ipsum dolar sit amet</H2>
+        <GlobalStyle />
+      </Fragment>
+    </ThemeProvider>
+  ))
+  .add('h3', () => (
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <H3>Lorem ipsum dolar sit amet</H3>
         <GlobalStyle />
       </Fragment>
     </ThemeProvider>

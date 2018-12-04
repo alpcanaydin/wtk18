@@ -1,15 +1,20 @@
 import styled from '@/theme';
 
 const Button = styled.button`
-  padding: 12px 18px;
-  border: none;
-  border-radius: 1.75rem;
+  padding: 18px 30px;
+  border-width: 0;
+  transition: background-color 0.1s;
+  font-family: ${props => props.theme.secondaryFontFamily};
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
   cursor: pointer;
-  font-size: 16px;
-  transition: 0.2s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;
 

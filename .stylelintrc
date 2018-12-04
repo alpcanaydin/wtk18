@@ -6,55 +6,6 @@
     "stylelint-config-recommended",
     "stylelint-config-styled-components"
   ],
-  "plugins": ["stylelint-order"],
-  "rules": {
-    "order/properties-alphabetical-order": null,
-    "order/properties-order": [
-      [
-        "position",
-        "z-index",
-        "top",
-        "right",
-        "bottom",
-        "left",
-        "display",
-        "overflow",
-        "width",
-        "min-width",
-        "max-width",
-        "height",
-        "min-height",
-        "max-height",
-        "box-sizing",
-        "flex",
-        "flex-basis",
-        "flex-direction",
-        "flex-flow",
-        "flex-grow",
-        "flex-shrink",
-        "flex-wrap",
-        "align-content",
-        "align-items",
-        "align-self",
-        "justify-content",
-        "order",
-        "padding",
-        "padding-top",
-        "padding-right",
-        "padding-bottom",
-        "padding-left",
-        "border",
-        "border-top",
-        "border-right",
-        "border-bottom",
-        "border-left",
-        "margin",
-        "margin-top",
-        "margin-right",
-        "margin-bottom",
-        "margin-left"
-      ],
-      { "unspecified": "bottomAlphabetical" }
-    ]
-  }
+  "plugins": [],
+  "rules": {}
 }
