@@ -1,4 +1,4 @@
-import styled from '@/theme';
+import styled from '../../theme';
 
 const Button = styled.button`
   padding: 18px 30px;

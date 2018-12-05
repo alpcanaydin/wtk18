@@ -3,21 +3,21 @@ import { storiesOf } from '@storybook/react';
 
 import { theme, ThemeProvider } from '../../theme';
 
-import SectionTitle from './SectionTitle';
-import { Paragraph } from '..';
+import Container from './Container';
 import GlobalStyle from '../../GlobalStyle';
+import Paragraph from '../Paragraph';
 
-storiesOf('SectionTitle', module).add('primary', () => (
+storiesOf('ParagraphcC', module).add('primary', () => (
   <ThemeProvider theme={theme}>
     <Fragment>
-      <div style={{ width: '600px', padding: '12px' }}>
-        <SectionTitle>Lorem ipsum dolar sit amet</SectionTitle>
+      <Container>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi illum soluta, inventore
           mollitia nobis perferendis minima repellendus fuga cum repudiandae optio itaque eius est
           totam, quas enim error officiis! Sit.
         </Paragraph>
-      </div>
+      </Container>
+
       <GlobalStyle />
     </Fragment>
   </ThemeProvider>

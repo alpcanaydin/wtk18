@@ -1,4 +1,4 @@
-import styled, { css } from '@/theme';
+import styled, { css } from '../../theme';
 
 const shared = css`
   font-family: ${props => props.theme.secondaryFontFamily};

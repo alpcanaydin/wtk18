@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { theme, ThemeProvider } from '@/theme';
+import { theme, ThemeProvider } from '../../theme';
 
 import { H1, H2, H3 } from './Heading';
 import GlobalStyle from '../../GlobalStyle';

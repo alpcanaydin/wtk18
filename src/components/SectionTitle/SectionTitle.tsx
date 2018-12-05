@@ -1,4 +1,4 @@
-import styled from '@/theme';
+import styled from '../../theme';
 
 const SectionTitle = styled.h5`
   color: ${props => props.theme.primaryColor};

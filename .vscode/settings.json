@@ -4,6 +4,6 @@
   "prettier.tslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "eslint.enable": false,
-  "flow.enabled": false,
-  "editor.wordBasedSuggestions": false
+  "flow.enabled": false
+  // "editor.wordBasedSuggestions": false
 }
