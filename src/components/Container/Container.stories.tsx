@@ -7,7 +7,7 @@ import Container from './Container';
 import GlobalStyle from '../../GlobalStyle';
 import Paragraph from '../Paragraph';
 
-storiesOf('ParagraphcC', module).add('primary', () => (
+storiesOf('Container', module).add('primary', () => (
   <ThemeProvider theme={theme}>
     <Fragment>
       <Container>
