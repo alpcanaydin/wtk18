@@ -4,13 +4,14 @@ import styled from '../../theme';
 
 import Label from './Label';
 
-const Input = styled.input`
+const Select = styled.select`
   width: 100%;
   height: 3.375rem;
   padding: 0.4375rem 0;
   font-size: 1.125rem;
   line-height: 2.375rem;
   background-image: none;
+  background-color: transparent;
   border-style: solid;
   color: ${props => props.theme.titleColor};
   border-color: #eaeaea;
@@ -25,22 +26,24 @@ const Input = styled.input`
 
 interface Props {
   label: string;
-  value: string | number;
+  value: boolean;
   onChange: (value: any) => void;
 }
 
-const SettingsInput = ({ label, value, onChange }: Props) => (
+const SettingsToggle = ({ label, value, onChange }: Props) => (
   <div>
     <Label>{label}</Label>
-    <Input
-      type="text"
-      value={value}
-      onChange={(event: FormEvent<HTMLInputElement>) => {
+    <Select
+      value={value ? 'yes' : 'no'}
+      onChange={(event: FormEvent<HTMLSelectElement>) => {
         const inputValue = event.currentTarget.value;
-        onChange(inputValue);
+        onChange(inputValue === 'yes');
       }}
-    />
+    >
+      <option value="yes">Evet</option>
+      <option value="no">Hayır</option>
+    </Select>
   </div>
 );
 
-export default SettingsInput;
+export default SettingsToggle;

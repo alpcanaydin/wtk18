@@ -3,6 +3,7 @@ import React from 'react';
 import { Loading, ListItem } from '../../../components';
 
 import Request from '../../../containers/Request';
+import Placeholder from './Placeholder';
 
 const data = {
   title: 'Title 1',
@@ -30,14 +31,18 @@ const data = {
 
 type Props = {
   networkDelay: number;
-  showLoadingAfter: number;
+  showPlaceholder: boolean;
 };
 
-const Detail = ({ networkDelay, showLoadingAfter }: Props) => (
+const Detail = ({ networkDelay, showPlaceholder }: Props) => (
   <Request networkDelay={networkDelay} response={data}>
     {({ loading, response }) => {
       if (loading) {
-        return <Loading showAfter={showLoadingAfter} />;
+        if (showPlaceholder) {
+          return <Placeholder />;
+        }
+
+        return <Loading showAfter={0} />;
       }
 
       if (!response) {
@@ -48,7 +53,7 @@ const Detail = ({ networkDelay, showLoadingAfter }: Props) => (
         <ListItem
           title={response.title}
           body={response.body}
-          to="/manipulasyon/gecikmeli-loading"
+          to="/gorsellik/spinner-yerine-placeholder"
           linkText="Geri Dön"
         />
       );

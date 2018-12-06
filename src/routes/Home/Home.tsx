@@ -34,7 +34,6 @@ const Home = () => (
           <H2>Manipülasyon</H2>
 
           <StyledLink to="/manipulasyon/gecikmeli-loading">Gecikmeli Loading</StyledLink>
-          <StyledLink to="/manipulasyon/tek-loading">Tek Loading</StyledLink>
         </StyledSection>
 
         <StyledSection>
@@ -43,7 +42,9 @@ const Home = () => (
           <StyledLink to="/gorsellik/spinner-yerine-placeholder">
             Spinner Yerine Placeholder
           </StyledLink>
-          <StyledLink to="/gorsellik/ilgili-ui-guncellemesi">İlgili UI Güncellemesi</StyledLink>
+          <StyledLink to="/gorsellik/ilgili-ui-guncellemesi">
+            Router Sayesinde İlgili UI Güncellemesi
+          </StyledLink>
         </StyledSection>
 
         <StyledSection>
