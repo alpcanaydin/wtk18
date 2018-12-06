@@ -10,17 +10,18 @@ const ButtonWrapper = styled.div`
 
 interface Props {
   title: string;
-  summary: string;
+  body: string;
   to: string;
+  linkText?: string;
 }
 
-const ListemItem = ({ title, summary, to }: Props) => (
+const ListemItem = ({ title, body, to, linkText = 'Devamı' }: Props) => (
   <div>
     <H3>{title}</H3>
-    <Paragraph>{summary}</Paragraph>
+    <Paragraph dangerouslySetInnerHTML={{ __html: body }} />
 
     <ButtonWrapper>
-      <PrimaryLinkButton to={to}>Devamı</PrimaryLinkButton>
+      <PrimaryLinkButton to={to}>{linkText}</PrimaryLinkButton>
     </ButtonWrapper>
   </div>
 );

@@ -7,7 +7,7 @@ const SectionTitle = styled.h5`
   text-transform: uppercase;
   font-size: 0.8125rem;
   font-weight: 500;
-  margin-bottom: 4.5rem;
+  margin-bottom: 2rem;
 `;
 
 export default SectionTitle;

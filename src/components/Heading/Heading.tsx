@@ -6,7 +6,7 @@ const shared = css`
   font-size: 3.44rem;
   color: ${props => props.theme.titleColor};
   line-height: ${props => props.theme.titleLineHeight};
-  margin-top: 1.75rem;
+  margin-top: 0;
   margin-bottom: 1.75rem;
 `;
 

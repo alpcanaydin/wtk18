@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import { NetworkDelayProvider } from './contexts/NetworkDelay';
+import { Header } from './components';
 
 import Routes from './routes';
 
 const App = () => (
-  <NetworkDelayProvider>
+  <>
+    <Header />
     <Routes />
-  </NetworkDelayProvider>
+  </>
 );
 
 export default App;

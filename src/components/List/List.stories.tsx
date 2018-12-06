@@ -13,8 +13,8 @@ storiesOf('List', module).add('primary', () => (
     <Fragment>
       <MemoryRouter>
         <List>
-          <ListItem title="Example title" summary="Lorem ipsum dolar sit amet" to="/" />
-          <ListItem title="Example title" summary="Lorem ipsum dolar sit amet" to="/" />
+          <ListItem title="Example title" body="Lorem ipsum dolar sit amet" to="/" />
+          <ListItem title="Example title" body="Lorem ipsum dolar sit amet" to="/" />
         </List>
       </MemoryRouter>
       <GlobalStyle />

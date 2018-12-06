@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 
 import styled from '../../theme';
 
-import { SectionTitle, Container, H2 } from '../../components';
+import { Container, H2, List } from '../../components';
+
+const Wrapper = styled.div`
+  margin: 32px 0;
+`;
 
 const StyledSection = styled.section`
-  margin-bottom: 60px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 `;
 
 const StyledLink = styled(Link)`
@@ -21,53 +27,59 @@ const StyledLink = styled(Link)`
 `;
 
 const Home = () => (
-  <Container>
-    <SectionTitle>WTK'18</SectionTitle>
+  <Wrapper>
+    <Container>
+      <List>
+        <StyledSection>
+          <H2>Manipülasyon</H2>
 
-    <StyledSection>
-      <H2>Manipülasyon</H2>
+          <StyledLink to="/manipulasyon/gecikmeli-loading">Gecikmeli Loading</StyledLink>
+          <StyledLink to="/manipulasyon/tek-loading">Tek Loading</StyledLink>
+        </StyledSection>
 
-      <StyledLink to="/manipulasyon/gecikmeli-loading">Gecikmeli Loading</StyledLink>
-      <StyledLink to="/manipulasyon/tek-loading">Tek Loading</StyledLink>
-    </StyledSection>
+        <StyledSection>
+          <H2>Görsellik</H2>
 
-    <StyledSection>
-      <H2>Görsellik</H2>
+          <StyledLink to="/gorsellik/spinner-yerine-placeholder">
+            Spinner Yerine Placeholder
+          </StyledLink>
+          <StyledLink to="/gorsellik/ilgili-ui-guncellemesi">İlgili UI Güncellemesi</StyledLink>
+        </StyledSection>
 
-      <StyledLink to="/gorsellik/spinner-yerine-placeholder">Spinner Yerine Placeholder</StyledLink>
-      <StyledLink to="/gorsellik/ilgili-ui-guncellemesi">İlgili UI Güncellemesi</StyledLink>
-    </StyledSection>
+        <StyledSection>
+          <H2>Optimizm</H2>
 
-    <StyledSection>
-      <H2>Optimizm</H2>
+          <StyledLink to="/optimizm/optimistik-ui-guncellemesi">
+            Optimistik UI Güncellemesi
+          </StyledLink>
+        </StyledSection>
 
-      <StyledLink to="/optimizm/optimistik-ui-guncellemesi">Optimistik UI Güncellemesi</StyledLink>
-    </StyledSection>
+        <StyledSection>
+          <H2>Bekleme Tasarrufu</H2>
 
-    <StyledSection>
-      <H2>Bekleme Tasarrufu</H2>
+          <StyledLink to="/bekleme-tasarrufu/hover-prefetch">Hover Prefetch</StyledLink>
+          <StyledLink to="/bekleme-tasarrufu/n1-load-more">N+1 Load More</StyledLink>
+          <StyledLink to="/bekleme-tasarrufu/async-fetch">
+            Daha Az Önemli Data’nın Asenkron Çekilmesi
+          </StyledLink>
+        </StyledSection>
 
-      <StyledLink to="/bekleme-tasarrufu/hover-prefetch">Hover Prefetch</StyledLink>
-      <StyledLink to="/bekleme-tasarrufu/n1-load-more">N+1 Load More</StyledLink>
-      <StyledLink to="/bekleme-tasarrufu/async-fetch">
-        Daha Az Önemli Data’nın Asenkron Çekilmesi
-      </StyledLink>
-    </StyledSection>
+        <StyledSection>
+          <H2>Request Tasarrufu</H2>
 
-    <StyledSection>
-      <H2>Request Tasarrufu</H2>
+          <StyledLink to="/request-tasarrufu/responselarin-cachelenmesi">
+            Response’ların Cache’lenmesi
+          </StyledLink>
+        </StyledSection>
 
-      <StyledLink to="/request-tasarrufu/responselarin-cachelenmesi">
-        Response’ların Cache’lenmesi
-      </StyledLink>
-    </StyledSection>
+        <StyledSection>
+          <H2>Bandwith & Initial Loading Tasarrufu</H2>
 
-    <StyledSection>
-      <H2>Bandwith & Initial Loading Tasarrufu</H2>
-
-      <StyledLink to="/bandwith-tasarrufu/code-splitting">Code Splitting</StyledLink>
-    </StyledSection>
-  </Container>
+          <StyledLink to="/bandwith-tasarrufu/code-splitting">Code Splitting</StyledLink>
+        </StyledSection>
+      </List>
+    </Container>
+  </Wrapper>
 );
 
 export default Home;

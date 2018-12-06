@@ -4,16 +4,14 @@ import { MemoryRouter } from 'react-router-dom';
 
 import { theme, ThemeProvider } from '../../theme';
 
-import ListItem from './ListItem';
+import Header from './Header';
 import GlobalStyle from '../../GlobalStyle';
 
-storiesOf('ListItem', module).add('primary', () => (
+storiesOf('Header', module).add('default', () => (
   <ThemeProvider theme={theme}>
     <Fragment>
       <MemoryRouter>
-        <div style={{ width: '600px' }}>
-          <ListItem title="Example title" body="Lorem ipsum dolar sit amet" to="/" />
-        </div>
+        <Header />
       </MemoryRouter>
       <GlobalStyle />
     </Fragment>
