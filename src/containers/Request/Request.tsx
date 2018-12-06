@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useEffect, FunctionComponent } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 
 interface ChildrenProps<T> {
   loading: boolean;
@@ -23,10 +23,6 @@ const Request = <T extends {}>({ children, networkDelay, response }: Props<T>) =
       clearTimeout(timer);
     };
   });
-
-  if (typeof children !== 'function') {
-    throw new Error('Please provide a function for children');
-  }
 
   if (done) {
     return <>{children({ loading: false, response })}</>;
