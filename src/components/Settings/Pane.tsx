@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Items = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   width: 320px;
