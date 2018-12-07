@@ -36,7 +36,7 @@ const SettingsInput = ({ label, value, onChange }: Props) => (
       type="text"
       value={value}
       onChange={(event: FormEvent<HTMLInputElement>) => {
-        const inputValue = event.currentTarget.value;
+        const inputValue = (event as any).target.value;
         onChange(inputValue);
       }}
     />

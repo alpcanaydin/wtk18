@@ -13,7 +13,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "lib": ["esnext", "dom"]
   },
   "include": ["src"]
 }

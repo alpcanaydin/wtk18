@@ -58,18 +58,13 @@ const Home = () => (
         <StyledSection>
           <H2>Bekleme Tasarrufu</H2>
 
+          <StyledLink to="/bekleme-tasarrufu/responselarin-cachelenmesi">
+            Response’ların Cache’lenmesi
+          </StyledLink>
           <StyledLink to="/bekleme-tasarrufu/hover-prefetch">Hover Prefetch</StyledLink>
           <StyledLink to="/bekleme-tasarrufu/n1-load-more">N+1 Load More</StyledLink>
           <StyledLink to="/bekleme-tasarrufu/async-fetch">
             Daha Az Önemli Data’nın Asenkron Çekilmesi
-          </StyledLink>
-        </StyledSection>
-
-        <StyledSection>
-          <H2>Request Tasarrufu</H2>
-
-          <StyledLink to="/request-tasarrufu/responselarin-cachelenmesi">
-            Response’ların Cache’lenmesi
           </StyledLink>
         </StyledSection>
 
