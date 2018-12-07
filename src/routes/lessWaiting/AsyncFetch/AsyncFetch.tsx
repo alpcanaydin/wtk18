@@ -12,24 +12,31 @@ import {
 import List from './List';
 import Detail from './Detail';
 
-const CacheResponses = () => {
+const AsyncFetch = () => {
   const [networkDelay, setNetworkDelay] = useState(200);
+  const [asyncFetchEnabled, setAsyncCacheEnabled] = useState(false);
   const [cacheEnabled, setCacheEnabled] = useState(false);
 
   return (
     <Container>
-      <SectionTitle>Response'ların Cache'lenmesi</SectionTitle>
+      <SectionTitle>Daha Az Önemli Data’nın Asenkron Çekilmesi</SectionTitle>
 
       <Switch>
         <Route
           exact={true}
-          path="/bekleme-tasarrufu/responselarin-cachelenmesi"
+          path="/bekleme-tasarrufu/async-fetch"
           render={() => <List networkDelay={networkDelay} cacheEnabled={cacheEnabled} />}
         />
         <Route
           exact={true}
-          path="/bekleme-tasarrufu/responselarin-cachelenmesi/:id"
-          render={() => <Detail networkDelay={networkDelay} cacheEnabled={cacheEnabled} />}
+          path="/bekleme-tasarrufu/async-fetch/:id"
+          render={() => (
+            <Detail
+              networkDelay={networkDelay}
+              asyncFetchEnabled={asyncFetchEnabled}
+              cacheEnabled={cacheEnabled}
+            />
+          )}
         />
       </Switch>
 
@@ -40,9 +47,14 @@ const CacheResponses = () => {
           onChange={setNetworkDelay}
         />
         <SettingsToggle label="Cache Aktif Mi?" value={cacheEnabled} onChange={setCacheEnabled} />
+        <SettingsToggle
+          label="Asenkron Çekme Aktif Mi?"
+          value={asyncFetchEnabled}
+          onChange={setAsyncCacheEnabled}
+        />
       </Settings>
     </Container>
   );
 };
 
-export default CacheResponses;
+export default AsyncFetch;

@@ -1,3 +1,25 @@
+const queen = {
+  id: '1',
+  name: 'Queen',
+  summary:
+    'Queen, 1970 yılında kurulmuş tüm dünyada albümleri 300 milyondan fazla satmış İngiliz rock grubudur.',
+  body: `Queen, 1970 yılında kurulmuş tüm dünyada albümleri 300 milyondan fazla satmış İngiliz rock grubudur. 1960'ların sonlarında Smile grubunun dağılma sürecine girmesi sonrasında Brian May, Roger Taylor ve Freddie Mercury tarafından Londra'da kurulmuştur.`,
+};
+
+const pinkFloyd = {
+  id: '2',
+  name: 'Pink Floyd',
+  summary: 'Pink Floyd, İngiliz progresif/psikedelik rock müzik grubu.',
+  body: `Pink Floyd, İngiliz progresif/psikedelik rock müzik grubu. Felsefî şarkı sözleri, yenilikçi albüm kapakları, etkileyici-girift sahne şovları ile Pink Floyd, dünya çapında başarıya ulaşmıştır.`,
+};
+
+const theBeatles = {
+  id: '3',
+  name: 'The Beatles',
+  summary: `The Beatles, Birleşik Krallık'ın Liverpool kentinde kurulmuş müzik grubudur.`,
+  body: `The Beatles, Birleşik Krallık'ın Liverpool kentinde kurulmuş müzik grubudur. 60'lı yılların popüler müzik grubu. The Beatles hem sanatsal hem de ticari başarılarıyla tarihte büyük bir üne kavuşmuştur. Modadan müziğe kadar geniş yelpazede bugünkü gelişime payları büyüktür.`,
+};
+
 const __API_RESPONSES__: { [key: string]: any } = {
   '/blog': [
     {
@@ -12,6 +34,7 @@ const __API_RESPONSES__: { [key: string]: any } = {
     },
   ],
   '/blog/1': {
+    id: '1',
     title: 'Blog Post 1',
     body: `
     <p>You don't have to spend all your time thinking about what you're doing, you just let it happen. Now we'll take the almighty fan brush. From all of us here, I want to wish you happy painting and God bless, my friends. Anyone can paint.</p
@@ -25,6 +48,7 @@ const __API_RESPONSES__: { [key: string]: any } = {
     `,
   },
   '/blog/2': {
+    id: '2',
     title: 'Blog Post 2',
     body: `
     <p>It's hard to see things when you're too close. Take a step back and look. Maybe, just to play a little, we'll put a little tree here. There are no mistakes. You can fix anything that happens.</p>
@@ -32,6 +56,54 @@ const __API_RESPONSES__: { [key: string]: any } = {
     <p>That's a son of a gun of a cloud. It is a lot of fun. Look around, look at what we have. Beauty is everywhere, you only have to look to see it. Now then, let's play. Steve wants reflections, so let's give him reflections. Be so very light. Be a gentle whisper.</p>
     `,
   },
+  '/artists': [
+    {
+      id: queen.id,
+      name: queen.name,
+      summary: queen.summary,
+    },
+    {
+      id: pinkFloyd.id,
+      name: pinkFloyd.name,
+      summary: pinkFloyd.summary,
+    },
+  ],
+  '/artist/1': {
+    id: queen.id,
+    name: queen.name,
+    body: queen.body,
+    relateds: [
+      { id: pinkFloyd.id, name: pinkFloyd.name, summary: pinkFloyd.summary },
+      { id: theBeatles.id, name: theBeatles.name, summary: theBeatles.summary },
+    ],
+  },
+  '/artist/1/detail': {
+    id: queen.id,
+    name: queen.name,
+    body: queen.body,
+  },
+  '/artist/2/detail': {
+    id: pinkFloyd.id,
+    name: pinkFloyd.name,
+    body: pinkFloyd.body,
+  },
+  '/artist/2': {
+    id: pinkFloyd.id,
+    name: pinkFloyd.name,
+    body: pinkFloyd.body,
+    relateds: [
+      { id: queen.id, name: queen.name, summary: queen.summary },
+      { id: theBeatles.id, name: theBeatles.name, summary: theBeatles.summary },
+    ],
+  },
+  '/artist/1/relateds': [
+    { id: pinkFloyd.id, name: pinkFloyd.name, summary: pinkFloyd.summary },
+    { id: theBeatles.id, name: theBeatles.name, summary: theBeatles.summary },
+  ],
+  '/artist/2/relateds': [
+    { id: queen.id, name: queen.name, summary: queen.summary },
+    { id: theBeatles.id, name: theBeatles.name, summary: theBeatles.summary },
+  ],
 };
 
 const get = (path: string, networkDelay: number): Promise<any> =>

@@ -62,7 +62,6 @@ const Home = () => (
             Response’ların Cache’lenmesi
           </StyledLink>
           <StyledLink to="/bekleme-tasarrufu/hover-prefetch">Hover Prefetch</StyledLink>
-          <StyledLink to="/bekleme-tasarrufu/n1-load-more">N+1 Load More</StyledLink>
           <StyledLink to="/bekleme-tasarrufu/async-fetch">
             Daha Az Önemli Data’nın Asenkron Çekilmesi
           </StyledLink>
