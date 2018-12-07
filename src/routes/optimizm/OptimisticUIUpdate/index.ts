@@ -1,3 +1,6 @@
-import OptimisticUIUpdate from './OptimisticUIUpdate';
+import Loadable from 'react-loadable';
 
-export default OptimisticUIUpdate;
+export default Loadable({
+  loader: () => import('./OptimisticUIUpdate'),
+  loading: () => null,
+});

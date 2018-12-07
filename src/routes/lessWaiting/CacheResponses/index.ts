@@ -1,3 +1,6 @@
-import CacheResponses from './CacheResponses';
+import Loadable from 'react-loadable';
 
-export default CacheResponses;
+export default Loadable({
+  loader: () => import('./CacheResponses'),
+  loading: () => null,
+});

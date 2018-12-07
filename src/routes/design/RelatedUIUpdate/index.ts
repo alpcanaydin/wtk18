@@ -1,3 +1,6 @@
-import RelatedUIUpdate from './RelatedUIUpdate';
+import Loadable from 'react-loadable';
 
-export default RelatedUIUpdate;
+export default Loadable({
+  loader: () => import('./RelatedUIUpdate'),
+  loading: () => null,
+});

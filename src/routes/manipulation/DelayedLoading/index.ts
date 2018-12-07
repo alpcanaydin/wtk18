@@ -1,3 +1,6 @@
-import DelayedLoading from './DelayedLoading';
+import Loadable from 'react-loadable';
 
-export default DelayedLoading;
+export default Loadable({
+  loader: () => import('./DelayedLoading'),
+  loading: () => null,
+});

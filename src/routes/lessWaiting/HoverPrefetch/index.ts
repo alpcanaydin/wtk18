@@ -1,3 +1,6 @@
-import HoverPrefetch from './HoverPrefetch';
+import Loadable from 'react-loadable';
 
-export default HoverPrefetch;
+export default Loadable({
+  loader: () => import('./HoverPrefetch'),
+  loading: () => null,
+});

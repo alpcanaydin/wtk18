@@ -1,3 +1,6 @@
-import Home from './Home';
+import Loadable from 'react-loadable';
 
-export default Home;
+export default Loadable({
+  loader: () => import('./Home'),
+  loading: () => null,
+});

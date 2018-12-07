@@ -1,3 +1,6 @@
-import VeryHugeRoute from './VeryHugeRoute';
+import Loadable from 'react-loadable';
 
-export default VeryHugeRoute;
+export default Loadable({
+  loader: () => import('./VeryHugeRoute'),
+  loading: () => null,
+});

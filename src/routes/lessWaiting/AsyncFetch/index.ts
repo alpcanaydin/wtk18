@@ -1,3 +1,6 @@
-import AsyncFetch from './AsyncFetch';
+import Loadable from 'react-loadable';
 
-export default AsyncFetch;
+export default Loadable({
+  loader: () => import('./AsyncFetch'),
+  loading: () => null,
+});
