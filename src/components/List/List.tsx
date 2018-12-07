@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react';
-
 import styled from '../../theme';
 
 const List = styled.div`

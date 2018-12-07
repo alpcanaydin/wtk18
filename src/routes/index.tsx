@@ -5,6 +5,7 @@ import Home from './Home';
 import DelayedLoading from './manipulation/DelayedLoading';
 import PlaceholderOverSpinner from './design/PlaceholderOverSpinner';
 import RelatedUIUpdate from './design/RelatedUIUpdate';
+import OptimisticUIUpdate from './optimizm/OptimisticUIUpdate';
 
 const Routes = () => (
   <Switch>
@@ -12,6 +13,7 @@ const Routes = () => (
     <Route path="/manipulasyon/gecikmeli-loading" component={DelayedLoading} />
     <Route path="/gorsellik/spinner-yerine-placeholder" component={PlaceholderOverSpinner} />
     <Route path="/gorsellik/ilgili-ui-guncellemesi" component={RelatedUIUpdate} />
+    <Route path="/optimizm/optimistik-ui-guncellemesi" component={OptimisticUIUpdate} />
   </Switch>
 );
 

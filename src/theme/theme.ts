@@ -1,6 +1,7 @@
 export interface ThemeInterface {
   readonly primaryColor: string;
   readonly secondaryColor: string;
+  readonly mutedColor: string;
   readonly bodyColor: string;
   readonly titleColor: string;
   readonly whiteColor: string;
@@ -14,6 +15,7 @@ export interface ThemeInterface {
 const theme: ThemeInterface = {
   primaryColor: '#fe2d5b',
   secondaryColor: '#e7e7e7',
+  mutedColor: '#afb6be',
   whiteColor: '#fff',
   bodyColor: '#717a85',
   titleColor: '#424242',

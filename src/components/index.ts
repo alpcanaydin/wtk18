@@ -10,3 +10,5 @@ export { default as Paragraph } from './Paragraph';
 export { default as SectionTitle } from './SectionTitle';
 export { default as List } from './List';
 export { default as ListItem } from './ListItem';
+export { default as LikeButton } from './LikeButton';
+export { default as Card } from './Card';
