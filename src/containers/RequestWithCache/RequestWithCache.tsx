@@ -20,19 +20,22 @@ const RequestWithCache = ({ children, networkDelay, path, enabled }: Props) => {
     enabled && networkStore.has(path) ? networkStore.get(path) : undefined,
   );
 
-  useEffect(() => {
-    if (enabled && networkStore.has(path)) {
-      setResponse(networkStore.get(path));
-      return;
-    }
-
-    api.get(path, networkDelay).then(data => {
-      if (enabled) {
-        networkStore.set(path, data);
+  useEffect(
+    () => {
+      if (enabled && networkStore.has(path)) {
+        setResponse(networkStore.get(path));
+        return;
       }
-      setResponse(data);
-    });
-  });
+
+      api.get(path, networkDelay).then(data => {
+        if (enabled) {
+          networkStore.set(path, data);
+        }
+        setResponse(data);
+      });
+    },
+    ['response'],
+  );
 
   return (
     <>

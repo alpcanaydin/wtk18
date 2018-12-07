@@ -7,6 +7,7 @@ import PlaceholderOverSpinner from './design/PlaceholderOverSpinner';
 import RelatedUIUpdate from './design/RelatedUIUpdate';
 import OptimisticUIUpdate from './optimizm/OptimisticUIUpdate';
 import CacheResponses from './lessWaiting/CacheResponses';
+import HoverPrefetch from './lessWaiting/HoverPrefetch';
 
 const Routes = () => (
   <Switch>
@@ -16,6 +17,7 @@ const Routes = () => (
     <Route path="/gorsellik/ilgili-ui-guncellemesi" component={RelatedUIUpdate} />
     <Route path="/optimizm/optimistik-ui-guncellemesi" component={OptimisticUIUpdate} />
     <Route path="/bekleme-tasarrufu/responselarin-cachelenmesi" component={CacheResponses} />
+    <Route path="/bekleme-tasarrufu/hover-prefetch" component={HoverPrefetch} />
   </Switch>
 );
 

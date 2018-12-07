@@ -13,15 +13,23 @@ interface Props {
   body: string;
   to: string;
   linkText?: string;
+  onLinkHover?: () => void;
 }
 
-const ListemItem = ({ title, body, to, linkText = 'Devamı' }: Props) => (
+const ListemItem = ({ title, body, to, linkText = 'Devamı', onLinkHover }: Props) => (
   <div>
     <H3>{title}</H3>
     <Paragraph dangerouslySetInnerHTML={{ __html: body }} />
 
     <ButtonWrapper>
-      <PrimaryLinkButton to={to}>{linkText}</PrimaryLinkButton>
+      <PrimaryLinkButton
+        to={to}
+        onMouseOver={() => {
+          onLinkHover && onLinkHover();
+        }}
+      >
+        {linkText}
+      </PrimaryLinkButton>
     </ButtonWrapper>
   </div>
 );

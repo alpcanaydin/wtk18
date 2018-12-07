@@ -34,7 +34,7 @@ const __API_RESPONSES__: { [key: string]: any } = {
   },
 };
 
-const get = <T extends {}>(path: string, networkDelay: number): Promise<any> =>
+const get = (path: string, networkDelay: number): Promise<any> =>
   new Promise(resolve => {
     console.log(`[API] ${path} için data çekiliyor...`);
 

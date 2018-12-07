@@ -7,7 +7,7 @@ interface Props {
   onCloseClick: () => void;
 }
 
-const Wrapper = styled.div`
+const Items = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
@@ -15,6 +15,8 @@ const Wrapper = styled.div`
   margin: 32px;
   padding: 32px;
   box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.25);
+  z-index: 3;
+  background: ${props => props.theme.whiteColor};
 `;
 
 const Close = styled.button`
@@ -38,11 +40,11 @@ const Options = styled.div`
 `;
 
 const Pane = ({ children, onCloseClick }: Props) => (
-  <Wrapper>
+  <Items>
     <Close onClick={onCloseClick}>Kapat</Close>
 
     <Options>{children}</Options>
-  </Wrapper>
+  </Items>
 );
 
 export default Pane;
