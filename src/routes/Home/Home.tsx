@@ -70,7 +70,7 @@ const Home = () => (
         <StyledSection>
           <H2>Bandwith & Initial Loading Tasarrufu</H2>
 
-          <StyledLink to="/bandwith-tasarrufu/code-splitting">Code Splitting</StyledLink>
+          <StyledLink to="/">Code Splitting</StyledLink>
         </StyledSection>
       </List>
     </Container>

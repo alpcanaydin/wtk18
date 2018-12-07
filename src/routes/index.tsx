@@ -9,6 +9,7 @@ import OptimisticUIUpdate from './optimizm/OptimisticUIUpdate';
 import CacheResponses from './lessWaiting/CacheResponses';
 import HoverPrefetch from './lessWaiting/HoverPrefetch';
 import AsyncFetch from './lessWaiting/AsyncFetch';
+import VeryHugeRoute from './VeryHugeRoute';
 
 const Routes = () => (
   <Switch>
@@ -20,6 +21,7 @@ const Routes = () => (
     <Route path="/bekleme-tasarrufu/responselarin-cachelenmesi" component={CacheResponses} />
     <Route path="/bekleme-tasarrufu/hover-prefetch" component={HoverPrefetch} />
     <Route path="/bekleme-tasarrufu/async-fetch" component={AsyncFetch} />
+    <Route path="/cok-buyuk-route" component={VeryHugeRoute} />
   </Switch>
 );
 
