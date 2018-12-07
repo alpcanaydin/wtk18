@@ -33,7 +33,7 @@ const Detail = ({
 }: Props & RouteComponentProps<{ id: string }>) => (
   <RequestWithCache
     enabled={cacheEnabled}
-    networkDelay={networkDelay}
+    networkDelay={asyncFetchEnabled ? networkDelay : networkDelay * 1.5}
     path={asyncFetchEnabled ? `/artist/${match.params.id}/detail` : `/artist/${match.params.id}`}
   >
     {({ loading, response }: { loading: boolean; response: ArtistItem }) => {

@@ -5,7 +5,7 @@ import styled from '../../theme';
 import gearIcon from '../../img/gear.svg';
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   right: 32px;
   bottom: 32px;
 `;

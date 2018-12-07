@@ -35,7 +35,12 @@ const Posts = ({ networkDelay, isRelatedUIEnabled }: Props) => (
           <ProfileHeader />
           <List>
             {response.map(item => (
-              <ListItem key={item.title} title={item.title} body={item.body} to="/" />
+              <ListItem
+                key={item.title}
+                title={item.title}
+                body={item.body}
+                to="/gorsellik/ilgili-ui-guncellemesi/yazilar"
+              />
             ))}
           </List>
         </>
